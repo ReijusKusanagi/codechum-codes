@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    
+    string user_input, word;
+    int number_input;
+    
+    cout << "Enter string: ";
+    getline(cin, user_input);
+    cout << "Enter number: ";
+    cin >> number_input;
+    
+    for (int i = 0; i < user_input.length(); i++) {
+        if (user_input[i] != ' '){
+            for (int j = 1;  j <= number_input; j++){
+                word += user_input[i];
+            }
+        }
+        }
+    
+    cout << "Result: " << word << endl;
+    
+    return 0;
+}
