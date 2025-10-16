@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+int main() {
+    
+    string user_input, word;
+    string longest_word = "";
+    
+    cout << "Enter a sentence: ";
+    getline(cin, user_input);
+    
+    for (int i = 0; i <= user_input.length(); i++) {
+        // hmm
+        if (isalnum(user_input[i])) {
+            word += user_input[i];
+        } else {
+            if (word.length() > longest_word.length()) {
+                longest_word = word;
+            }
+            word = "";
+        }
+        // test case 3, single word sentence
+        if (word.length() > longest_word.length()) {
+            longest_word = word;
+        }
+    }
+    
+    cout << "Longest word: " << longest_word << endl;
+    
+    return 0;
+}
