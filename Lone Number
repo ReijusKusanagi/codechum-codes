@@ -1,0 +1,33 @@
+#include <iostream>
+using  namespace std;
+
+int main() {
+    
+    int array_size;
+    int numArray[100];
+    
+    cout << "Enter array size: ";
+    cin >> array_size;
+    
+    cout << "Enter numbers: ";
+    for (int i = 0; i < array_size; i++){
+        cin >> numArray[i];
+    }
+    int loneNum = 0;
+    for (int i = 0; i < array_size; i++){
+        int count = 0;
+        for (int j = 0; j < array_size; j++){
+            if (numArray[i] == numArray[j]){
+                count++;
+            }
+        }
+        if (count == 1) {
+            loneNum = numArray[i];
+            break;
+        }
+    }
+    cout << "The lone number is: " << loneNum;
+    
+    return 0;
+    
+}
