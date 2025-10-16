@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int size;
+    int initial_input[100];
+    
+    cout << "Enter array size: ";
+    cin >> size;
+    
+    cout << "Enter array elements:" << endl;
+    for (int i = 0; i < size; i++) {
+        cin >> initial_input[i];
+    }
+    
+    int rotation, index = 0;
+    int rotated_array[100];
+    
+    cout << "Enter rotation count: ";
+    cin >> rotation;
+    
+    rotation = rotation % size;
+    
+    for (int i = rotation; i < size; i++) {
+        rotated_array[index] = initial_input[i];
+        index++;
+    }
+    
+    for (int i = 0; i < rotation; i++) {
+        rotated_array[index] = initial_input[i];
+        index++;
+    }
+    
+    cout << "Rotated array: ";
+    for (int i = 0; i < size; i++) {
+        cout << rotated_array[i] << " ";
+    }
+    
+    return 0;
+    
+}
