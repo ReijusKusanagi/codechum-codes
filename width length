@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int recLength, recWidth;
+    
+    cout << "Enter length: ";
+    cin >> recLength;
+    cout << "Enter width: ";
+    cin >> recWidth;
+    
+    if (recLength >= 1 && recLength <= 1000){
+        if (recWidth >= 1 && recWidth <= 1000){
+            int result = recLength * recWidth;
+    
+            cout << "The area of the rectangle is: " << result << endl;
+            
+    }
+    }
+    
+    return 0;
+    
+}
